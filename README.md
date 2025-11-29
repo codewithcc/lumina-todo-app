@@ -4,6 +4,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 ![API](https://img.shields.io/badge/API-26%2B-brightgreen?style=flat)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=flat)
+![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=flat)
 
 > **The fastest way to manage daily tasks. Simple, clean, and distraction-free.**
 
@@ -44,7 +45,7 @@ Lumina is built with **Modern Android Architecture** in mind:
 
 ## 📥 Download
 
-<a href='https://play.google.com/store/apps/details?id=com.yourname.lumina'>
+<a href='https://play.google.com/store/apps/details?id=com.codewithcc.lumina'>
     <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80"/>
 </a>
 
