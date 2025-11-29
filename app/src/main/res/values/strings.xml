@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Lumina</string>
+    <string name="from_code_with_cc">from Code with Cc</string>
+    <string name="edit_icon">Edit Icon</string>
+    <string name="delete_icon">Delete Icon</string>
+    <string name="new_todo">New Todo</string>
+    <string name="update_todo">Update Todo</string>
+    <string name="enter_title">Enter todo title</string>
+    <string name="enter_desc">Enter todo description</string>
+    <string name="select_priority">Select Priority</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete_todo">Delete Todo</string>
+    <string name="delete_todo_text">Are you sure to delete todo?</string>
+    <string name="cancel">cancel</string>
+    <string name="delete">delete</string>
+    <string name="no_todos">No todos for today</string>
 </resources>

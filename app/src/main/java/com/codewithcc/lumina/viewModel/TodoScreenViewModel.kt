@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import java.util.UUID
 
 class TodoScreenViewModel : ViewModel() {
-    private val todoDao = App.Companion.todoDatabase.getTodoDao()
+    private val todoDao = App.todoDatabase.getTodoDao()
     private val _todoList = MutableStateFlow<List<TodoEntity>>(emptyList())
     private val _selectedTodo = MutableStateFlow(TodoEntity())
     private val _showSheet = MutableStateFlow(false)

@@ -12,6 +12,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.codewithcc.lumina.R
@@ -32,13 +33,13 @@ fun SplashScreen(onClick: () -> Unit) {
             modifier = Modifier
                 .size(220.dp),
             painter = painterResource(R.drawable.ic_launcher_foreground),
-            contentDescription = "app icon"
+            contentDescription = stringResource(R.string.app_name)
         )
         Text(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(bottom = 50.dp),
-            text = "from Code with Cc",
+            text = stringResource(R.string.from_code_with_cc),
             style = MaterialTheme.typography.bodyLarge
                 .copy(fontWeight = FontWeight.SemiBold)
         )

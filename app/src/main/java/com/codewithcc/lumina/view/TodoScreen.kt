@@ -38,6 +38,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
@@ -76,16 +77,16 @@ fun TodoScreen() {
             icon = {
                 Icon(
                     painter = painterResource(R.drawable.ic_delete),
-                    contentDescription = "delete",
+                    contentDescription = stringResource(R.string.delete_icon),
                     tint = Color.Red
                 )
             },
             title = {
-                Text(text = "Delete Todo")
+                Text(text = stringResource(R.string.delete_todo))
             },
             text = {
                 Text(
-                    text = "Are you sure to delete todo?"
+                    text = stringResource(R.string.delete_todo_text)
                 )
             },
             confirmButton = {
@@ -98,7 +99,7 @@ fun TodoScreen() {
                     }
                 ) {
                     Text(
-                        text = "cancel"
+                        text = stringResource(R.string.cancel)
                     )
                 }
             },
@@ -109,7 +110,7 @@ fun TodoScreen() {
                     }
                 ) {
                     Text(
-                        text = "delete"
+                        text = stringResource(R.string.delete)
                     )
                 }
             }
@@ -123,7 +124,7 @@ fun TodoScreen() {
             TopAppBar(
                 title = {
                     Text(
-                        text = "Lumina",
+                        text = stringResource(R.string.app_name),
                         style = MaterialTheme.typography.headlineLarge
                     )
                 }
@@ -137,7 +138,7 @@ fun TodoScreen() {
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_add),
-                    contentDescription = "add icon"
+                    contentDescription = stringResource(R.string.add)
                 )
             }
         }
@@ -173,7 +174,7 @@ fun TodoScreen() {
             } else {
                 if (todoList.isEmpty()) {
                     Text(
-                        text = "No todos for today"
+                        text = stringResource(R.string.no_todos)
                     )
                 } else {
                     LazyColumn(

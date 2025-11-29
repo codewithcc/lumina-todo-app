@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -29,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
@@ -78,7 +80,7 @@ fun TodoCard(
                 .padding(12.dp)
                 .clickable(
                     indication = null,
-                    interactionSource = MutableInteractionSource(),
+                    interactionSource = remember { MutableInteractionSource() },
                     onClick = {
                         expanded = !expanded
                     }
@@ -131,7 +133,7 @@ fun TodoCard(
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_edit),
-                    contentDescription = "edit",
+                    contentDescription = stringResource(R.string.edit_icon),
                     tint = if (isDark) EditDark else EditLight
                 )
             }
@@ -140,7 +142,7 @@ fun TodoCard(
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_delete),
-                    contentDescription = "delete",
+                    contentDescription = stringResource(R.string.delete_icon),
                     tint = if (isDark) DeleteDark else DeleteLight
                 )
             }

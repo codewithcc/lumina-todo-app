@@ -25,10 +25,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
+import com.codewithcc.lumina.R
 import com.codewithcc.lumina.model.db.TodoEntity
 import com.codewithcc.lumina.model.TodoPriority
 
@@ -53,7 +55,7 @@ fun TodoInputScreen(
         Text(
             modifier = Modifier
                 .fillMaxWidth(),
-            text = "New Todo",
+            text = stringResource(if (initialData.id.isEmpty()) R.string.add else R.string.update_todo),
             style = MaterialTheme.typography.headlineMedium
                 .copy(fontWeight = FontWeight.SemiBold)
         )
@@ -68,7 +70,7 @@ fun TodoInputScreen(
             },
             placeholder = {
                 Text(
-                    text = "Enter todo title"
+                    text = stringResource(R.string.enter_title)
                 )
             },
             keyboardOptions = KeyboardOptions(
@@ -87,7 +89,7 @@ fun TodoInputScreen(
             },
             placeholder = {
                 Text(
-                    text = "Enter todo description"
+                    text = stringResource(R.string.enter_desc)
                 )
             },
             keyboardOptions = KeyboardOptions(
@@ -108,7 +110,7 @@ fun TodoInputScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable),
-                value = priority?.name ?: "Select Priority",
+                value = priority?.name ?: stringResource(R.string.select_priority),
                 enabled = !loading,
                 readOnly = true,
                 onValueChange = {},
@@ -152,7 +154,7 @@ fun TodoInputScreen(
             if (loading) CircularWavyProgressIndicator(
                 color = MaterialTheme.colorScheme.onPrimary,
                 trackColor = Color.Transparent
-            ) else Text(text = if (initialData.id.isNotEmpty()) "Update" else "Add")
+            ) else Text(text = stringResource(if (initialData.id.isEmpty()) R.string.add else R.string.update))
         }
     }
 }
