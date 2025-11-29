@@ -77,10 +77,10 @@ class TodoScreenViewModel : ViewModel() {
 
     fun deleteTodo(id: String) {
         viewModelScope.launch {
-            _loading.update { false }
+            _loading.update { true }
             todoDao.deleteTodo(id)
             _selectedTodo.update { TodoEntity() }
-            _loading.update { true }
+            _loading.update { false }
             _showDialog.update { false }
         }
     }
